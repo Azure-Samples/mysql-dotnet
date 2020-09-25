@@ -1,57 +1,47 @@
-# Project Name
+---
+page_type: sample
+languages:
+- csharp
+products:
+- azure
+extensions:
+- services: MySQL
+- platforms: dotnet
+---
 
-(short, 1-3 sentenced, description of the project)
+# Getting started on managing MySQL databases in C# #
 
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+Azure sample for managing MySQL Database -
+  - Check name availability for the server creation.
+  - Create a MySQL Server.
+  - Update the server's properties.
+  - Create a firewall rule.
+  - Update a firewall rule.
+  - List and delete the firewalls rules.
+  - Get and update a configuration of the server.
+  - Delete the server.
 
 
-## Demo
+## Running this Sample ##
 
-A demo app is included to show how to use the project.
+To run this sample:
 
-To run the demo, follow these steps:
+Create an Azure service principal with the [Azure CLI][] command `az ad sp create-for-rbac --output json` and set the following environment variables per that command's 
+output. 
+`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_SECRET`, `AZURE_SUBSCRIPTION_ID`
 
-(Add steps to start up the demo)
+    git clone https://github.com/Azure-Samples/mysql-dotnet.git
 
-1.
-2.
-3.
+    cd mysql-dotnet
 
-## Resources
+    dotnet run
 
-(Any additional resources or related projects)
+## More information ##
 
-- Link to supporting information
-- Link to similar sample
-- ...
+[Azure Management Libraries for C#](https://github.com/Azure/azure-sdk-for-net/tree/Fluent)
+[Azure .Net Developer Center](https://azure.microsoft.com/en-us/develop/net/)
+If you don't have a Microsoft Azure subscription you can get a FREE trial account [here](http://go.microsoft.com/fwlink/?LinkId=330212)
+
+---
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
